@@ -40,19 +40,19 @@ void loop() {
 
 //1 ciclo 
 
-  s0.addValue(0, self.pot );// 
+  s0.addValue(0, self.pot );// channel 0
 
 //2 ciclo 
 
-  s0.addValue(1, self.pot );// 
+  s0.addValue(1, self.pot );// channel 1
 
 //3 ciclo  
 
-  s0.addValue(2, self.pot );// 
+  s0.addValue(2, self.pot );// channel 2
 
 //4 ciclo  
 
-  s0.addValue(3, self.pot );// 
+  s0.addValue(3, self.pot );// channel 3
 
   delay(100); 
 
