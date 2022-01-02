@@ -1,0 +1,59 @@
+//incluir a biblioteca -> Nextion 
+/*
+  This example code is in the public domain.
+  
+  wave_form
+  
+  Gabriel ps
+*/
+
+
+
+#include "Nextion.h" 
+
+//id pagina, id componente, nome componente 
+
+NexWaveform s0 = NexWaveform(0, 1, "s0");
+ 
+class variables {
+ public:
+      //float pot;
+      double pot;
+};
+
+void setup() { 
+
+  Serial.begin(9600); 
+
+  nexInit(); 
+
+} 
+
+ 
+void loop() { 
+  variables self;
+  Serial.print("lendo var: "); 
+
+  self.pot = analogRead(A0); 
+
+  Serial.println(self.pot); 
+
+//1 ciclo 
+
+  s0.addValue(0, self.pot );// 
+
+//2 ciclo 
+
+  s0.addValue(1, self.pot );// 
+
+//3 ciclo  
+
+  s0.addValue(2, self.pot );// 
+
+//4 ciclo  
+
+  s0.addValue(3, self.pot );// 
+
+  delay(100); 
+
+}  
