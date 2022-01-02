@@ -1,6 +1,5 @@
 //incluir a biblioteca -> Nextion 
 /*
-  This example code is in the public domain.
   wave_form
   
   Gabriel ps
